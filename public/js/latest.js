@@ -1,16 +1,16 @@
-document.getElementById('butRefresh').addEventListener('click', function() {
-    // Get fresh, updated data from GitHub whenever you are clicked
-    toast('Fetching latest data...');
-    fetchCommits();
-    console.log("Getting fresh data!!!");
-});
-
 (function() {
   'use strict';
 
   var app = {
     spinner: document.querySelector('.loader')
   };
+
+  document.getElementById('butRefresh').addEventListener('click', function() {
+    // Get fresh, updated data from GitHub whenever you are clicked
+    toast('Fetching latest data...');
+    fetchCommits();
+    console.log("Getting fresh data!!!");
+});
 
   var container = document.querySelector('.container');
   var commitContainer = ['.first', '.second', '.third', '.fourth', '.fifth'];
